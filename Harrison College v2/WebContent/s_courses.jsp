@@ -1,5 +1,5 @@
 <%@ include file="/student_header.jsp" %>
-<div class="panel panel-default">
+<div class="panel panel-default" style="width:60%;margin:auto;">
 	<div class="panel-body">
 		<table class="table table-striped table-bordered">
 			<tr>
@@ -13,10 +13,10 @@
 					<td>${ myClass.cours.courseName } 
 					<c:choose>
 						<c:when test="${ advisor_logged_in == true}">
-							<a role="button" class="btn btn-xs btn-default" href="advisorAddCourse?crn=${ myClass.crn }">Add</a></td>
+							<a role="button" class="btn btn-xs btn-danger" href="advisorAddCourse?crn=${ myClass.crn }">Add</a></td>
 						</c:when>
 						<c:otherwise>
-							<a role="button" class="btn btn-xs btn-default" href="addCourse?crn=${ myClass.crn }">Add</a></td>
+							<a role="button" class="btn btn-xs btn-danger" href="addCourse?crn=${ myClass.crn }">Add</a></td>
 						</c:otherwise>
 					</c:choose>
 					<td>${ myClass.cours.credits }</td>

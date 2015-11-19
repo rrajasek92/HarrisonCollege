@@ -32,7 +32,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="studentClasslistServlet">Harrison College</a>
+			<a class="navbar-brand" href="ins_classesTaught">Harrison College</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,8 +42,30 @@
 				<!-- 
 					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
 					 -->
-				<li><a href="transcriptViewServlet">Transcript</a></li>
+				<li><a href="ins_classesTaught">My Classes</a></li>
 				<li><a href="catalog_filter.jsp">Browse Classes</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Previous Semesters <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+				    <li><a href="ins_preHome?semester=S15">S15</a></li>
+				    <li><a href="ins_preHome?semester=F14">F14</a></li>
+				    <li><a href="ins_preHome?semester=S14">S14</a></li>
+				  </ul>
+				</li>
+				<!-- 
+				<li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">One more separated link</a></li>
+		          </ul>
+		        </li>
+				 -->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="logout">Logout</a></li>

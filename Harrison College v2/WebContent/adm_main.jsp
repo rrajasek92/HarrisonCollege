@@ -1,10 +1,10 @@
-<%@ include file="/header.jsp"%>
+<%@ include file="/adminheader.jsp"%>
 <div class = "container"><br><br>
-<a href="adm_Course" class="btn btn-default btn-sm active" role="button">Courses</a>
+<!-- <a href="adm_Course" class="btn btn-default btn-sm active" role="button">Courses</a>
 <a href="adm_Classroom" class="btn btn-default btn-sm active" role="button">Classrooms</a>
 <a href="adm_Department" class="btn btn-default btn-sm active" role="button">Departments</a>
 <a href="admin" class="btn btn-default btn-sm active" role="button">Change Roles</a>
-<a href="CatalogBrowsing?search_type=ac_cs" role="button" class="btn btn-default btn-sm active">All classes in current semester</a>
+<a href="CatalogBrowsing?search_type=ac_cs" role="button" class="btn btn-default btn-sm active">All classes in current semester</a> -->
 
 <br>
 	<h3>Current Semester: F15</h3>
@@ -43,4 +43,4 @@
 				</form>
 		</div>
 </div>
-<%@ include file="/footer.jsp" %>
+<%@ include file="/adminfooter.jsp" %>

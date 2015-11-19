@@ -1,16 +1,13 @@
-<%@ include file="header.jsp"%>
-<h2>Class Enrollments</h2>
-<br>
-
-<a role="button" class="btn btn-default" href="catalog_filter.jsp">Enroll Classes</a><br>
-<a role="button" class="btn btn-default" href="transcriptViewServlet?studentid=${ studentid }">Transcript</a>
-<div class="panel panel-default">
-	<div class="panel-body">
+<%@ include file="student_header.jsp"%>
+<div class="panel panel-default" style="width:60%;margin:auto;">
+	<div class="panel-body" align="center">
+		<h3>Class Enrollments</h3>
 			<c:choose>
 				<c:when test="${ no_classes == true }">
 					<p>No classes enrolled.</p>
 				</c:when>
 				<c:otherwise>
+				<br>
 		<table
 			class="table table-striped table table-bordered table table-hover"
 			border="3" bordercolor="red">

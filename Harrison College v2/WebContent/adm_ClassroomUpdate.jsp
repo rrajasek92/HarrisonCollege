@@ -1,4 +1,4 @@
-<%@ include file="/header.jsp"%>
+<%@ include file="/adminheader.jsp"%>
 <div class="container">
 	<br>
 	<br>
@@ -26,4 +26,4 @@
 	</form>
 </div>
 
-<%@ include file="/footer.jsp"%>
+<%@ include file="/adminfooter.jsp"%>

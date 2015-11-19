@@ -29,8 +29,8 @@ crossorigin="anonymous">
 
 <body style="background-color:#dcdcdc">
 
-<nav class="navbar navbar-inverse navbar-floating-top">
-<!--  style="background-color: #990000"> -->
+<!-- <nav class="navbar navbar-inverse navbar-floating-top">
+ style="background-color: #990000">
 <div class="container">
 <div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed"
@@ -54,7 +54,7 @@ class="icon-bar"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a class="navbar-brand" href="#"></a>
+<a class="navbar-brand" href="#"></a> -->
 <%  
 
 String UserName=(String) session.getAttribute("email");
@@ -75,24 +75,9 @@ session.setAttribute("email", UserName);
             }
         </script>
 
-<form action="logout" align="right">
-<table>
+                        <a class="btn btn-default btn-sm active" role="button" href="logout">Logout</a>
+                        <a class="btn btn-default btn-sm active" role="button" href="advisor">Student List</a>
 
-<tr>
-   
-  
-   <td colspan=6 valign="bottom" align="right">
-                <div class="btn btn-primary" class="username" onmouseover="showMenu();" onmouseout="hideMenu();">Welcome "<%=UserName%>" , Click here to Logout
-                    <span id="box1">
-                        <a href="logout">Logout</a>
-                    </span>
-                </div>
-            </td>
-    
-    
-</table>
-
-</form>
 </div>
 </div>
 </div>

@@ -1,4 +1,4 @@
-<%@ include file="/header.jsp"%>
+<%@ include file="/adminheader.jsp"%>
 <div class = "container"><br>
 	<br>
 <a href="adm_CourseAdd.jsp" type="button" name="button"
@@ -35,4 +35,4 @@
 <form action="adm_main.jsp" method="POST">
 <button class="btn btn-danger btn-xs">Home</button></form>
 </div>
-<%@ include file="/footer.jsp"%>
+<%@ include file="/adminfooter.jsp"%>

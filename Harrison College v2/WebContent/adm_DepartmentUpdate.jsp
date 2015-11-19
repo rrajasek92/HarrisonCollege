@@ -1,4 +1,4 @@
-<%@ include file="/header.jsp"%>
+<%@ include file="/adminheader.jsp"%>
 <div class = "container"><br><br>
 <form action="adm_DepartmentUpdate" method="POST">
 			<div class="form-group">
@@ -10,4 +10,4 @@
 			<br><br>
 			<button class="btn btn-primary btn-sm">Update</button></form>
 </div>
-<%@ include file="/footer.jsp"%>
+<%@ include file="/adminfooter.jsp"%>
