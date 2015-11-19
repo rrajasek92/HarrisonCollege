@@ -1,9 +1,15 @@
-<%@ include file="header.jsp"%>
+<%@ include file="advisorHeader.jsp"%>
+<div class="panel panel-default">
+	<div class="panel-body">
 <h2>Class Enrollments</h2>
 <br>
+<div>
+<a role="button" class="btn btn-danger btn-xs" href="catalog_filter.jsp">Enroll Classes</a>
+<br><br>
+<a role="button" class="btn btn-danger btn-xs" href="advisorViewTranscript?studentid=${ studentid }">Transcript</a>
+</div>
+</div>
 
-<a role="button" class="btn btn-default" href="catalog_filter.jsp">Enroll Classes</a><br>
-<a role="button" class="btn btn-default" href="advisorViewTranscript?studentid=${ studentid }">Transcript</a>
 <div class="panel panel-default">
 	<div class="panel-body">
 		<c:choose>
@@ -32,6 +38,11 @@
 				</c:otherwise>
 			</c:choose>
 	</div>
+</div>
+<div>
+&nbsp&nbsp&nbsp&nbsp<a class="btn btn-danger btn-xs" role="button" href="http://localhost:8080/Harrison_College_v2/advisor">Back</a><br><br>
+</div>
+</div>
 </div>
 
 

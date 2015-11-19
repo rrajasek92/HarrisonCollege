@@ -1,4 +1,4 @@
-<%@ include file="header.jsp"%>
+<%@ include file="advisorHeader.jsp"%>
 <div class="panel panel-default">
 	<div class="panel-body">
 	<h2>Student Transcript</h2>
@@ -13,9 +13,9 @@
 				${tableinfo}
 			</tbody>
 		</table>
+	<a class="btn btn-danger btn-xs" role="button" href="advisorViewClasslist?studentid=${studentid }">Back</a>
 	</div>
 	
-	<a class="btn btn-default" role="button" href="advisorViewClasslist?studentid=${studentid }">Home</a>
 </div>
 
 <%@ include file="footer.jsp"%>

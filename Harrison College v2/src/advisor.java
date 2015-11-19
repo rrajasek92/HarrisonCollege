@@ -54,7 +54,7 @@ public class advisor extends HttpServlet {
 		{
 			hu=ProductsList.get(i);
 			long id1=hu.getUserId();
-			tableinfo += "<tr><td>" + hu.getFullName()+"</td><td>" + hu.getMajor()+"</td><td>" + hu.getEntryYear()+"</td><td>" + hu.getEmail()+"</td><td> <a href=\"advisorViewClasslist?studentid="+id1+"\">" + "ClickForDetails"+"</td></tr>";
+			tableinfo += "<tr><td>" + hu.getFullName()+"</td><td>" + hu.getMajor()+"</td><td>" + hu.getEntryYear()+"</td><td>" + hu.getEmail()+"</td><td> <a class=\"btn btn-danger btn-xs\" role=\"button\" href=\"advisorViewClasslist?studentid="+id1+"\">" + "Course Details"+"</td></tr>";
 			
 			
 		}
