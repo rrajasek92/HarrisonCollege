@@ -16,7 +16,7 @@ public class Grade implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="GRADES_GRADEID_GENERATOR", sequenceName="GRADES_SEQ")
+	@SequenceGenerator(name="GRADES_GRADEID_GENERATOR", sequenceName="GRADES_SEQ",allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="GRADES_GRADEID_GENERATOR")
 	@Column(name="GRADE_ID")
 	private long gradeId;

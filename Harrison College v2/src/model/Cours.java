@@ -16,7 +16,7 @@ public class Cours implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="COURSES_COURSEID_GENERATOR", sequenceName="COURSES_SEQ1")
+	@SequenceGenerator(name="COURSES_COURSEID_GENERATOR", sequenceName="COURSES_SEQ1",allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="COURSES_COURSEID_GENERATOR")
 	@Column(name="COURSE_ID")
 	private long courseId;

@@ -107,7 +107,7 @@ public class CheckUser extends HttpServlet {
 					{
 						out.println("<script type=\"text/javascript\">");
 						  
-						   out.println("location='instructor';");
+						   out.println("location='ins_classesTaught';");
 						   out.println("</script>");
 					}
 					if(position.equalsIgnoreCase("student"))

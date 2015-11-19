@@ -16,7 +16,7 @@ public class Hclass implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="HCLASSES_CRN_GENERATOR", sequenceName="CLASSES_SEQ")
+	@SequenceGenerator(name="HCLASSES_CRN_GENERATOR", sequenceName="CLASSES_SEQ",allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="HCLASSES_CRN_GENERATOR")
 	private long crn;
 
