@@ -86,6 +86,38 @@ public class CollegeDB {
 		return isSuccess;
 	}
 	
+	public boolean createNewUser(String position, String userId){
+		boolean isSuccess = false;
+		
+		EntityManager em = DBUtil.getEmFactory().createEntityManager();
+		EntityTransaction trans = em.getTransaction();
+		trans.begin();
+		
+		String query = ("UPDATE Huser u SET  u.position = :position "+ "WHERE u.userId= :userId");
+		
+		TypedQuery<Huser> results = em.createQuery(query, Huser.class);
+		
+		results.setParameter("position",position);
+		results.setParameter("userId",Long.parseLong(userId));	
+		results.executeUpdate();
+	
+		
+		
+		
+		try{
+			
+			trans.commit();
+			isSuccess = true;
+		}catch(Exception e){
+			System.out.println(e);
+			trans.rollback();
+		}finally{
+			em.close();
+		}
+		
+		return isSuccess;
+	}
+	
 	public ArrayList<Huser> getAllUsers(){
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		List<Huser> fd = null;

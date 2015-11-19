@@ -33,6 +33,18 @@ public class CollegeInterface {
 		
 	}
 	
+	public boolean createNewAccount(String pos,String userid){
+		boolean isSuccess = false;
+		
+		//create new account
+		if(db.createNewUser(pos,userid)){
+			isSuccess = true;
+		}
+		
+		return isSuccess;
+		
+	}
+	
 	public ArrayList<Huser> pullUser(){
 		ArrayList<Huser> UserList= new ArrayList<Huser>();
 			CollegeDB WD = new CollegeDB();
@@ -44,8 +56,17 @@ public class CollegeInterface {
 	public ArrayList<Huser> pullStudent(String position){
 		ArrayList<Huser> ProductsList= new ArrayList<Huser>();
 			CollegeDB WD = new CollegeDB();
-			ProductsList= WD.getStudent(position);
-			
+			//ProductsList= WD.getStudent(position);
+			ProductsList= WD.getAllUsers();
+			return ProductsList;
+	}
+	
+	
+	public ArrayList<Huser> pullStudent(){
+		ArrayList<Huser> ProductsList= new ArrayList<Huser>();
+			CollegeDB WD = new CollegeDB();
+			//ProductsList= WD.getStudent(position);
+			ProductsList= WD.getAllUsers();
 			return ProductsList;
 	}
 	

@@ -62,7 +62,7 @@ public class CatalogBrowsing extends HttpServlet {
 			HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		String jpql = "select hc from Hclass hc where hc.semester = :currentSemester";
-		List<Hclass> classesList = DBUtil.getEmFactory().createEntityManager().createQuery(jpql, Hclass.class).setParameter("currentSemester", "f15").getResultList();
+		List<Hclass> classesList = DBUtil.getEmFactory().createEntityManager().createQuery(jpql, Hclass.class).setParameter("currentSemester", "F15").getResultList();
 		System.out.println("classesList size: " + classesList.size());
 		request.setAttribute("classes_list", classesList);
 		try {
@@ -119,7 +119,7 @@ public class CatalogBrowsing extends HttpServlet {
 			e1.printStackTrace();
 		}
 		//		String jpql2 = "select d from Department d where d.departmentId = :departmentId";
-		//		List<Huser> usersList = customTools.DBUtil.getEmFactory().createEntityManager().createQuery(jpql1, Huser.class).setParameter("currentSemester", "f15").getResultList();
+		//		List<Huser> usersList = customTools.DBUtil.getEmFactory().createEntityManager().createQuery(jpql1, Huser.class).setParameter("currentSemester", "F15").getResultList();
 		//		List<BigDecimal> departmentIdList = new ArrayList<BigDecimal>();
 		//		List<Department> departmentsList = new ArrayList<Department>();
 		//		for(Huser user:usersList)
@@ -148,7 +148,7 @@ public class CatalogBrowsing extends HttpServlet {
 		String jpql = "select hc from Hclass hc where hc.cours.department.departmentName = :departmentName and hc.semester = :currentSemester";
 		TypedQuery<Hclass> query = customTools.DBUtil.getEmFactory().createEntityManager().createQuery(jpql, Hclass.class);
 		query.setParameter("departmentName", departmentName);
-		query.setParameter("semester", "f15");
+		query.setParameter("semester", "F15");
 		List<Hclass> classesList = query.getResultList();
 		System.out.println("classesList size: " + classesList.size());
 		request.setAttribute("classes_list", classesList);
@@ -197,7 +197,7 @@ public class CatalogBrowsing extends HttpServlet {
 			instructor.setUserId(-1);
 		}
 		TypedQuery<Hclass> query = customTools.DBUtil.getEmFactory().createEntityManager().createQuery(jpql, Hclass.class);
-		query.setParameter("currentSemester", "f15");
+		query.setParameter("currentSemester", "F15");
 		System.out.println("intructor ID: "+ instructor.getUserId());
 		query.setParameter("instructorId", Long.toString(instructor.getUserId()));
 		List<Hclass> classesList = query.getResultList();

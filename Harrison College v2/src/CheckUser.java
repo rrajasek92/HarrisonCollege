@@ -123,7 +123,7 @@ public class CheckUser extends HttpServlet {
 						
 						out.println("<script type=\"text/javascript\">");
 						  
-						   out.println("location='student';");
+						   out.println("location='adm_main.jsp';");
 						   out.println("</script>");
 					
 					}

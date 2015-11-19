@@ -38,17 +38,6 @@
 					</div>
 				</form>
 		</div>
-		<div class="form-group form-grp-lg">
-			<!-- all majors in a department -->
-			<form method="POST" action="CatalogBrowsing">
-				Search for all majors in a specific department<br>
-				<input type="hidden" name="search_type" value="majors_by_department">
-				<div class="input-group">
-					<input class="form-control" type="text" name="department_name" placeholder="Department name">
-					<input class="btn btn-default" type="submit" value="Search">
-				</div>
-			</form>
-		</div>	
 	</div>
 </div>
 <%@ include file="/footer.jsp" %>
