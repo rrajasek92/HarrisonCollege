@@ -63,7 +63,7 @@ public class advisorDropCourse extends HttpServlet {
 		cEnroll.setHclass(hclass);
 		delete(cEnroll);
 		getServletContext()
-     	.getRequestDispatcher("/studentClasslistServlet")
+     	.getRequestDispatcher("/advisorViewClasslist?studentid="+student)
      		.forward(request, response);
 	}
 	

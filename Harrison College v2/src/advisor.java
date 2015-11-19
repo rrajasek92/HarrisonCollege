@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.Huser;
 
@@ -34,7 +35,9 @@ public class advisor extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		EntityManager em = customTools.DBUtil.getEmFactory().createEntityManager();
 		Huser hu = new Huser();
-		
+		HttpSession session = request.getSession();
+		System.out.println("logged in as advisor");
+		session.setAttribute("advisor_logged_in", true);
 		ArrayList<Huser> ProductsList= new ArrayList<Huser>();
 		
 		

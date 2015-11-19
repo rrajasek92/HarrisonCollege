@@ -49,19 +49,26 @@ public class advisorViewClasslist extends HttpServlet {
 		
 		String userid=request.getParameter("studentid");
 		HttpSession session = request.getSession();
-		session.setAttribute("studentid", userid);
-		System.out.println(userid);
+		session.setAttribute("a_student_id", userid);
+		System.out.println("a_student_id: " + userid);
 		List<ClassEnrollment> cEnroll= new ArrayList<ClassEnrollment>();
 		cEnroll = getClassEnrollment(userid);
 		String tableinfo="";
+		try{
 		for(int i=0;i<cEnroll.size();i++){
 			tableinfo += "<tr><td>" + cEnroll.get(i).getHuser().getUserId()+"</td><td>" + cEnroll.get(i).getHclass().getCrn()+"</td><td>" 
 		+ cEnroll.get(i).getHclass().getCours().getCourseId()+"</td><td>" + cEnroll.get(i).getHclass().getCours().getCourseName()+"</td><td>" 
 					+ cEnroll.get(i).getHclass().getCours().getSemester()+"</td><td>" 
 		+ cEnroll.get(i).getHclass().getClassroom().getMaxCapacity()+"</td><td><a href=\"http://localhost:8080/Harrison_College_v2"
-				+ "/dropCourse?crn="+cEnroll.get(i).getHclass().getCrn()+"&eid="+cEnroll.get(i).getEnrollmentId()+"&uid="+cEnroll.get(i)
+				+ "/advisorDropCourse?crn="+cEnroll.get(i).getHclass().getCrn()+"&eid="+cEnroll.get(i).getEnrollmentId()+"&uid="+cEnroll.get(i)
 				.getHuser().getUserId()+"\">Drop</a></td></tr>";
 
+							}
+		}
+		catch(NullPointerException e)
+		{
+			request.setAttribute("no_classes", true);
+			System.out.println(e.getMessage());
 		}
 		request.setAttribute("tableinfo", tableinfo);
 		request.setAttribute("studentid",userid);

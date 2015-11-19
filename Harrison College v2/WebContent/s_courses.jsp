@@ -9,7 +9,15 @@
 		</tr>
 		<c:forEach var="myClass" items="${ classes_list }">
 			<tr>
-				<td>${ myClass.cours.courseName } <a role="button" class="btn btn-xs btn-default" href="addCourse?crn=${ myClass.crn }">Add</a></td>
+				<td>${ myClass.cours.courseName } 
+				<c:choose>
+					<c:when test="${ advisor_logged_in == true}">
+						<a role="button" class="btn btn-xs btn-default" href="advisorAddCourse?crn=${ myClass.crn }">Add</a></td>
+					</c:when>
+					<c:otherwise>
+						<a role="button" class="btn btn-xs btn-default" href="addCourse?crn=${ myClass.crn }">Add</a></td>
+					</c:otherwise>
+				</c:choose>
 				<td>${ myClass.cours.credits }</td>
 				<td>${ myClass.cours.semester }</td>
 				<td>${ myClass.cours.department.departmentName }</td>

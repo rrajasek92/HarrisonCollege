@@ -51,7 +51,7 @@ public class advisorAddCourse extends HttpServlet {
 	
 		ClassEnrollment cEnroll = new ClassEnrollment();
 		HttpSession session= request.getSession();
-		long student= (long) session.getAttribute("userid");
+		long student= Long.parseLong((String)session.getAttribute("a_student_id"));
 		System.out.println(student);
 		Huser hstudent=new Huser();
 		Hclass hclass= new Hclass();
@@ -61,7 +61,7 @@ public class advisorAddCourse extends HttpServlet {
 		cEnroll.setHclass(hclass);
 		insert(cEnroll);
 		getServletContext()
-     	.getRequestDispatcher("/studentClasslistServlet")
+     	.getRequestDispatcher("/advisorViewClasslist?studentid="+student)
      		.forward(request, response);
 	}
 	

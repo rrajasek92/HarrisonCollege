@@ -73,11 +73,12 @@ public class Signup extends HttpServlet {
 			 boolean NewUser = T.createNewAccount(UN, PWD,position,FN,major,year);
 			 if(NewUser)
 			 {
+				 request.setAttribute("signed_up", "true");
 				 HttpSession session=request.getSession(); 
 				 session.setAttribute("UserName", UN);
 				  out.println("<script type=\"text/javascript\">");
 				   out.println("alert('New User Added');");
-				   out.println("location='InsertProduct';");
+				   out.println("location='catalog_filter.jsp';");
 				   out.println("</script>");
 
 				

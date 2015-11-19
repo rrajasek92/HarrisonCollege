@@ -6,6 +6,11 @@
 <a role="button" class="btn btn-default" href="advisorViewTranscript?studentid=${ studentid }">Transcript</a>
 <div class="panel panel-default">
 	<div class="panel-body">
+		<c:choose>
+				<c:when test="${ no_classes == true }">
+					<p>No classes enrolled.</p>
+				</c:when>
+				<c:otherwise>
 		<table
 			class="table table-striped table table-bordered table table-hover"
 			border="3" bordercolor="red">
@@ -20,9 +25,12 @@
 					<th></th>
 				</tr>
 			</thead>
-			<tbody>${tableinfo}
+			<tbody>
+					${tableinfo}
 			</tbody>
 		</table>
+				</c:otherwise>
+			</c:choose>
 	</div>
 </div>
 
